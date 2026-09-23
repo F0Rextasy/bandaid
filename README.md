@@ -56,7 +56,13 @@ Or drop the script anywhere on your `PATH`. No dependencies, no config file.
 `bandaid` ships a [SKILL.md](SKILL.md) that teaches an AI coding agent to reproduce the bug before editing, fix at the cause, and gate its own diff:
 
 ```bash
-# Claude Code / compatible clients
+# one command — Claude Code, Cursor, Codex, and 75+ agents
+npx skills add F0Rextasy/bandaid
+```
+
+Manual equivalent:
+
+```bash
 cp -r bandaid ~/.claude/skills/bandaid
 # or per-project
 cp -r bandaid .claude/skills/bandaid
