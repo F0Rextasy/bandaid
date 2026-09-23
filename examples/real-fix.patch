@@ -1,0 +1,20 @@
+--- a/src/checkout.py
++++ b/src/checkout.py
+@@ -2 +2,5 @@
+-    return db.query("select * from users where id = ?", uid)
++    row = db.query("select * from users where id = ?", uid)
++    if row is None:
++        raise LookupError(f"user {uid} not found")
++    return row
+@@ -6 +9,4 @@
+-        raise ValueError("total must be positive")
++        if order.total > MAX_TOTAL:
++            raise ValueError(
++                f"total {order.total} exceeds limit {MAX_TOTAL}")
++        return order.total
+@@ -10 +16,4 @@
+-    return float(raw)
++    try:
++        return float(raw)
++    except ValueError as exc:
++        raise PriceError(f"unparseable price {raw!r}") from exc

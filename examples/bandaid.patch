@@ -1,0 +1,24 @@
+--- a/src/checkout.py
++++ b/src/checkout.py
+@@ -2 +2,4 @@
+-    return db.query("select * from users where id = ?", uid)
++    try:
++        return db.query("select * from users where id = ?", uid)
++    except Exception:
++        pass
+@@ -6 +9 @@
+-        raise ValueError("total must be positive")
++        return None
+@@ -10 +13,4 @@
+-    return float(raw)
++    try:
++        return float(raw)
++    except:
++        pass
+--- a/web/cart.js
++++ b/web/cart.js
+@@ -4 +4,3 @@
+-  if (pct < 0) throw new RangeError("pct");
++  try {
++    return apply(cart);
++  } catch (e) {}

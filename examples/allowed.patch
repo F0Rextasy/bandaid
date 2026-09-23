@@ -1,0 +1,5 @@
+--- a/web/session.js
++++ b/web/session.js
+@@ -7 +7 @@
+-  } catch (err) {
++  } catch (err) {} // bandaid: allow -- legacy session store, issue #42
