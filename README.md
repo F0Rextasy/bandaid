@@ -7,7 +7,7 @@
 [![skills](https://skills.sh/b/F0Rextasy/bandaid?style=flat-square)](https://skills.sh/F0Rextasy/bandaid)
 [![license](https://img.shields.io/badge/license-MIT-3fb950?style=flat-square)](LICENSE)
 
-![bandaid findings on a suppression-heavy patch](assets/demo.svg)
+![bandaid findings on a suppression-heavy patch](assets/demo.png)
 
 ## Why this exists
 
