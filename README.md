@@ -4,6 +4,7 @@
 
 [![tests](https://img.shields.io/github/actions/workflow/status/F0Rextasy/bandaid/test.yml?branch=master&label=tests&style=flat-square&color=3fb950)](https://github.com/F0Rextasy/bandaid/actions/workflows/test.yml)
 [![python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white&style=flat-square)](https://www.python.org/)
+[![skills](https://skills.sh/b/F0Rextasy/bandaid?style=flat-square)](https://skills.sh/F0Rextasy/bandaid)
 [![license](https://img.shields.io/badge/license-MIT-3fb950?style=flat-square)](LICENSE)
 
 ![bandaid findings on a suppression-heavy patch](assets/demo.svg)
@@ -15,6 +16,10 @@ The flaky checkout bug was "fixed" by wrapping the payment call in `except Excep
 ## Quick start
 
 ```bash
+# install the skill into any agent (Claude Code, Codex, Cursor, OpenCode, ...):
+npx skills add F0Rextasy/bandaid
+
+# or run it directly:
 git clone https://github.com/F0Rextasy/bandaid
 cd myproject
 python /path/to/bandaid/scripts/bandaid.py --staged          # pre-commit
